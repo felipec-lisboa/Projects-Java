@@ -52,3 +52,4 @@ dependency-reduced-pom.xml
 # OS-specific
 .DS_Store
 Thumbs.db
+README.md
