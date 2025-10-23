@@ -9,16 +9,18 @@ public class App {
         Locale.setDefault(Locale.US);
         Scanner teclado = new Scanner(System.in);
 
-        Product product = new Product();
 
         System.out.println("Enter product data: ");
         System.out.print("Name: ");
-        product.name = teclado.nextLine(); 
+        String name = teclado.nextLine(); 
 
         System.out.print("Price: ");
-        product.price = teclado.nextDouble();
-        System.out.print("Quantity in stock: ");
-        product.quantity = teclado.nextInt();
+        double price = teclado.nextDouble();
+        // System.out.print("Quantity in stock: ");
+        // int quantity = teclado.nextInt();
+
+
+        Product product = new Product(name, price);
 
         System.out.println(product);
         
@@ -29,9 +31,9 @@ public class App {
 
         if (decision.equals("yes")){
             System.out.println("Enter the number of products to be added in stock: ");
-            int quantity = teclado.nextInt();
+            product.setQuantity(teclado.nextInt()); 
             teclado.nextLine();
-            product.AddProduts(quantity);
+            //product.AddProduts(product.quantity);
             System.out.println("Update data: " + product);
         }else{
             teclado.nextLine();
@@ -39,20 +41,20 @@ public class App {
 
         
 
-        System.out.println("Do you want to remove another product? Answer with Yes and No.");
-        //teclado.nextLine();
-        String _decision = teclado.nextLine();
+        // System.out.println("Do you want to remove another product? Answer with Yes and No.");
+        // //teclado.nextLine();
+        // String _decision = teclado.nextLine();
 
-        if (_decision.equals("yes")){
-            System.out.println("Enter the number of products to be removed from stock: ");
-            int quantity = teclado.nextInt();
+        // if (_decision.equals("yes")){
+        //     System.out.println("Enter the number of products to be removed from stock: ");
+        //     product.quantity = teclado.nextInt();
 
-            product.RemoveProducts(quantity);
-            System.out.println("Update data: " + product);
+        //     product.RemoveProducts(product.quantity);
+        //     System.out.println("Update data: " + product);
 
-        }else{
-            teclado.nextLine();
-        }
+        // }else{
+        //     teclado.nextLine();
+        // }
 
 
         teclado.close();
