@@ -3,9 +3,12 @@ package entities;
 public class Conta{
 
 private static final int TAXA = 5;
-private final int numeroConta;
+private int numeroConta;
 private String nome;
-private double saldo;
+protected double saldo;
+
+public Conta(){
+}
 
 public Conta(int numeroConta, String nome, double saldo){
     this.numeroConta = numeroConta;
