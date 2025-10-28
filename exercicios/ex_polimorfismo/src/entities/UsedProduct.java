@@ -10,12 +10,9 @@ public class UsedProduct extends Product{
         this.manufactureDate = manufactureDate;
     }
 
-    // @Override
+    //@Override
     // public String priceTag() {
-    //     String tipo = super.priceTag();
-    //     return tipo + 
-
-    // }
-
-    
+    // String tipo = super.priceTag();
+    //return tipo + 
 }
+
